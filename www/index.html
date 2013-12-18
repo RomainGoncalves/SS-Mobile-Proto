@@ -1,5 +1,7 @@
 <!doctype html>
 <html ng-app="santech-engine">
+
+    <base href="/">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Santech Engine - Mobile Prototype">
@@ -10,9 +12,12 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
+
+        <div ng-view></div>
         
         <script src="js/vendors/angular.1.2.5.min.js"></script>
         <script src="js/vendors/angular.1.2.5-route.min.js"></script>
+        <script src="js/controllers.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
