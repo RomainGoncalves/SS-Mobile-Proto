@@ -1,17 +1,17 @@
 <h2>HOME</h2>
 <div class="container">
-			<div class="row">
-				<form name="formLogin">
-					<div class="form-group">
-						<div class="col-xs-3 col-md-3">
-							<select name="users" class="form-control">
-								<option value="Hichem" class="">Hichem</option>
-								<option value="Romain">Romain</option>
-								<option value="Youssef">Youssef</option>
-							</select>
-						</div>
-						<input type="button" class="btn btn-primary" value="Login">
-					</div>
-				</form>
+	<div class="row">
+		<form name="formLogin" ng-submit="setUser()">
+			<div class="form-group">
+				<div class="col-xs-3 col-md-3">
+					<select name="users" class="form-control" ng-model="username">
+						<option value="Hichem" class="">Hichem</option>
+						<option value="Romain">Romain</option>
+						<option value="Youssef">Youssef</option>
+					</select>
+				</div>
+				<input type="submit" class="btn btn-primary" value="Login">
 			</div>
-		</div>
+		</form>
+	</div>
+</div>

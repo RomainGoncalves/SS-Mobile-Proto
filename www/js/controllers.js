@@ -1,6 +1,16 @@
-function HomeCtrl(){
-	console.log( 'home' );
+function HomeCtrl($scope, $location, SessionService){
+	
+	//Set username to scope
+	$scope.setUser = function () {
+
+		SessionService.set('username', $scope.username);
+		
+		$location.path('/publications');
+
+	}
 }
-function PublicationsCtrl(){
-	console.log( 'PublicationsCtrl' );
+function PublicationsCtrl($scope, SessionService){
+	
+	$scope.username = SessionService.get('username') ;
+
 }

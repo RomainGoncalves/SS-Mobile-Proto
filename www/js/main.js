@@ -12,3 +12,32 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 	$locationProvider.html5Mode(true);
 
 }]);//end config
+
+app.factory('SessionService', function(){
+		return {
+			get: function(key){
+
+				//Check first if the browser has sessionStorage
+				if(Modernizr.sessionstorage){
+					return sessionStorage.getItem(key) ;
+				}
+
+			},
+			set: function(key, value){
+
+				//Check first if the browser has sessionStorage
+				if(Modernizr.sessionstorage){
+					return sessionStorage.setItem(key, value) ;
+				}
+
+			},
+			unset: function(key){
+
+				//Check first if the browser has sessionStorage
+				if(Modernizr.sessionstorage){
+					return sessionStorage.removeItem(key) ;
+				}
+
+			}
+		}
+	})
