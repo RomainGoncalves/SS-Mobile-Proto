@@ -1,1 +1,11 @@
 <h2>PUBLICATIONS</h2>
+<a href="/">BACK</a>
+<br /><br />
+User: <strong>{{ username }}</strong>
+<ul>
+	<li ng-repeat="publication in publications">{{ publication.body }}
+		<ul ng-if="publication.comments">
+			<li ng-repeat="comment in publication.comments">{{ comment.body }}</li>
+		</ul>
+	</li>
+</ul>
