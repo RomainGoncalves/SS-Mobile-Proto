@@ -1,3 +1,41 @@
-.container{
-	margin-top: 100px;
+ul, ol{
+	margin: 0;
+	padding: 0;
+}
+ul li, ol li{
+	list-style-type: none;
+}
+ul li p{
+	font-size: 15px;
+	font-weight: bold;
+}
+ul li img{
+	margin-right: 20px;
+}
+ul.publications > li{
+	margin-top: 20px;
+}
+ul li .comments-header{
+	clear: both;
+	margin: 10px 0;
+	font-size: 20px;
+}
+ol li.row0{
+	background: grey;
+}
+ol li.row1{
+	background: orange;
+}
+.comments{
+	font-size: 12px;
+	clear: both;
+}
+.comments li{
+	float: left;
+	display: block;
+	clear: both;
+	padding: 5px;
+}
+.comments li img{
+	width: 50px;
 }
