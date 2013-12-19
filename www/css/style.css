@@ -1,3 +1,7 @@
+ul, ol{
+	margin: 0;
+	padding: 0;
+}
 ul li, ol li{
 	list-style-type: none;
 }
@@ -6,8 +10,7 @@ ul li p{
 	font-weight: bold;
 }
 ul li img{
-	margin: 20px;
-	margin-top: 0;
+	margin-right: 20px;
 }
 ul.publications > li{
 	margin-top: 20px;
@@ -28,10 +31,9 @@ ol li.row1{
 	clear: both;
 }
 .comments li{
-	float: right;
+	float: left;
 	display: block;
 	clear: both;
-	text-align: right;
 	padding: 5px;
 }
 .comments li img{
