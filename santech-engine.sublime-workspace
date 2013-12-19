@@ -1,0 +1,500 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"borderradui",
+				"border-bottom-right-radius"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"imp",
+				"Important"
+			],
+			[
+				"getstyle",
+				"get_stylesheet_directory_uri"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"overlay",
+				"overlay-bottom"
+			],
+			[
+				"getsyur",
+				"get_stylesheet_directory_uri"
+			],
+			[
+				"getstyl",
+				"get_stylesheet_directory_uri"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 15,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/main.js",
+			"settings":
+			{
+				"buffer_size": 1065,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 316,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"selected_items":
+		[
+			[
+				"synjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pacin",
+				"Package Control: Install Package"
+			],
+			[
+				"synt",
+				"Set Syntax: HTML"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"syntht",
+				"Set Syntax: HTML"
+			],
+			[
+				"syncss",
+				"Set Syntax: CSS"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"fetc",
+				"Fetch: Package"
+			],
+			[
+				"fetcpa",
+				"Fetch: Package"
+			],
+			[
+				"",
+				"Emmet: Decrement Number by 1"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"fetch",
+				"Fetch: Manage"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/.cordova/config.json",
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/platforms/android/AndroidManifest.xml",
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/platforms/android/assets/www/config.xml",
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/www/config.xml",
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/platforms/android/bin/AndroidManifest.xml",
+		"/C/Users/Romain/Documents/Santech/SS-Mobile-Prototype/assets/Santech-Engine-soapui-project.xml",
+		"/C/Users/Romain/Documents/WebDev/uliveto/wp-content/themes/white-rock/header.php",
+		"/C/Users/Romain/Documents/WebDev/uliveto/test-gmaps/main.js",
+		"/C/Users/Romain/Documents/WebDev/uliveto/test-gmaps/index.html",
+		"/C/Users/Romain/Documents/WebDev/uliveto/wp-content/themes/white-rock/js/jquery.gomap-1.3.2.min.js",
+		"/C/Users/Romain/Documents/WebDev/uliveto/index.html",
+		"/C/Users/Romain/Documents/WebDev/uliveto/mail.php",
+		"/C/Users/Romain/Documents/WebDev/uliveto/js/main.js",
+		"/C/Users/Romain/Documents/WebDev/uliveto/sass/style.scss",
+		"/C/Users/Romain/Documents/WebDev/uliveto/css/style.css",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/less/media.less",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/less/mixins.less",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/less/bootstrap.less",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/less/code.less",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/less/grid.less",
+		"/C/Users/Romain/Documents/DevTools/bootstrap-3.0.2/dist/css/bootstrap.css",
+		"/C/Users/Romain/Documents/WebDev/uliveto/css/fonts.css",
+		"/C/Users/Romain/Documents/WebDev/gotthefevermedia/.htaccess",
+		"/C/Users/Romain/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Romain/Documents/WebDev/u62250375_uma-migrate-20131014103414.sql",
+		"/C/Users/Romain/Documents/Envato/Theme Forest/thedawn/lib/scripts/jfunctions.js",
+		"/C/Users/Romain/Documents/WebDev/uma/wp-includes/js/hoverIntent.js",
+		"/C/Users/Romain/AppData/Local/Temp/fz3temp-1/editor-style.css",
+		"/C/Users/Romain/Documents/Envato/Theme Forest/thedawn/functions.php",
+		"/C/Users/Romain/Documents/WebDev/uma/wp-includes/js/hoverIntent.min.js",
+		"/C/xampp/apache/logs/access.log",
+		"/C/xampp/apache/logs/error.log",
+		"/C/Users/Romain/.ssh/github_rsa.pub",
+		"/C/Users/Romain/AppData/Roaming/Sublime Text 3/Packages/User/Fetch.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"C:\\Users\\Romain\\Documents\\Santech\\SS-Mobile-Prototype",
+			"C:\\Users\\Romain\\Documents\\Envato\\Theme Forest\\thedawn"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"HelloWorld",
+			"-",
+			"java",
+			"5",
+			"map",
+			".sf-menu a:hover",
+			"js_loader",
+			"jpg",
+			"over",
+			"_email",
+			"fff",
+			"white",
+			"-device",
+			"subscribe",
+			"static",
+			"#",
+			"border",
+			"white",
+			"@medi",
+			"inline",
+			"999",
+			"  ",
+			"overlya",
+			"height",
+			"width",
+			"height",
+			"()\n",
+			"tequni",
+			"Comment",
+			"e",
+			"youtube",
+			"flickr",
+			"twitter",
+			"\"c",
+			"linkedinlink",
+			"googl",
+			"on",
+			"hover",
+			"2M",
+			"[",
+			"gotthefevermedia",
+			"gtfm",
+			"D:\\Dropbox\\Yellow_Fox_Media\\The_Goldfish_-_v2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								512,
+								512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/js/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								316,
+								316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "santech-engine.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"header",
+				"wp-content\\themes\\white-rock\\header.php"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"gomap",
+				"wp-content\\themes\\white-rock\\js\\jquery.gomap-1.3.2.min.js"
+			],
+			[
+				"cotact",
+				"wp-content\\themes\\white-rock\\page-contact-progression.php"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"stye",
+				"css\\style.css"
+			],
+			[
+				"ty",
+				"sass\\style.scss"
+			],
+			[
+				"style",
+				"css\\style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"san",
+				"C:\\Users\\Romain\\Documents\\Santech\\Santech.fr\\santech.sublime-project"
+			],
+			[
+				"wee",
+				"C:\\Users\\Romain\\Documents\\Santech\\Weemo\\weemo.sublime-project"
+			],
+			[
+				"reva",
+				"C:\\Users\\Romain\\Documents\\Santech\\Revad\\revad.sublime-project"
+			],
+			[
+				"re",
+				"C:\\Users\\Romain\\Documents\\Santech\\Revad\\revad.sublime-project"
+			],
+			[
+				"sant",
+				"C:\\Users\\Romain\\Documents\\Santech\\Santech.fr\\santech.sublime-project"
+			],
+			[
+				"mum",
+				"C:\\Users\\Romain\\Documents\\WebDev\\mum-society\\mumsociety.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

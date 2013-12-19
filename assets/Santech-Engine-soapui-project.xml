@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Santech-Engine" resourceRoot="" soapui-version="4.6.3" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="Port">8081</con:setting><con:setting id="Set endpoint for HTTP Tunnel:">https://</con:setting><con:setting id="HTTP tunnel - KeyStore"/><con:setting id="HTTP tunnel - Password"/><con:setting id="HTTP tunnel - KeyPassword"/><con:setting id="HTTP tunnel - TrustStore"/><con:setting id="HTTP tunnel - TrustStore Password"/><con:setting id="Reuse request state">false</con:setting><con:setting id="HTTP tunnel - Set SSL Client Key Store path"/><con:setting id="Content types to monitor">*/html, */xml, */soap+xml, */json, */x-json, */javascript, */x-amf</con:setting><con:setting id="HTTP tunnel - Set SSL Client Key Store Password"/></con:settings><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="Plugin_publication_PublicationServiceSoapBinding" type="wsdl" bindingName="{urn:http.service.publication.com}Plugin_publication_PublicationServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/Romain/Documents/Santech/SS-Mobile-Prototype/assets/publication.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\Romain\Documents\Santech\SS-Mobile-Prototype\assets\publication.wsdl"><con:part><con:url>file:\C:\Users\Romain\Documents\Santech\SS-Mobile-Prototype\assets\publication.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:http.service.publication.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:http.service.publication.com" xmlns:intf="urn:http.service.publication.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://service.portal.liferay.com" xmlns:tns10="http://permission.security.portal.liferay.com" xmlns:tns11="http://util.kernel.portal.liferay.com" xmlns:tns12="http://model.publication.com" xmlns:tns2="http://portlet.kernel.portal.liferay.com" xmlns:tns3="http://util.java" xmlns:tns4="http://model.portal.liferay.com" xmlns:tns5="http://http.servlet.javax" xmlns:tns6="http://theme.portal.liferay.com" xmlns:tns7="http://model.mobiledevicerules.portlet.liferay.com" xmlns:tns8="http://portlet.javax" xmlns:tns9="http://device.mobile.kernel.portal.liferay.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema targetNamespace="urn:http.service.publication.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="ArrayOf_xsd_long">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:long[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_xsd_string">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="soapenc:string[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_xsd_anyType">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_tns2_PublicationSoap">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns12:PublicationSoap[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="mapItem">
+        <sequence>
+          <element name="key" nillable="true" type="xsd:anyType"/>
+          <element name="value" nillable="true" type="xsd:anyType"/>
+        </sequence>
+      </complexType>
+      <complexType name="Map">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/>
+        </sequence>
+      </complexType>
+      <complexType name="Vector">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://model.portal.liferay.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="PortletPreferencesIds">
+        <sequence>
+          <element name="companyId" type="xsd:long"/>
+          <element name="ownerId" type="xsd:long"/>
+          <element name="ownerType" type="xsd:int"/>
+          <element name="plid" type="xsd:long"/>
+          <element name="portletId" nillable="true" type="soapenc:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://util.kernel.portal.liferay.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="StringBundler">
+        <sequence>
+          <element name="index" type="xsd:int"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://theme.portal.liferay.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="PortletDisplay">
+        <sequence>
+          <element name="URLBack" nillable="true" type="soapenc:string"/>
+          <element name="URLClose" nillable="true" type="soapenc:string"/>
+          <element name="URLConfiguration" nillable="true" type="soapenc:string"/>
+          <element name="URLConfigurationJS" nillable="true" type="soapenc:string"/>
+          <element name="URLEdit" nillable="true" type="soapenc:string"/>
+          <element name="URLEditDefaults" nillable="true" type="soapenc:string"/>
+          <element name="URLEditGuest" nillable="true" type="soapenc:string"/>
+          <element name="URLExportImport" nillable="true" type="soapenc:string"/>
+          <element name="URLHelp" nillable="true" type="soapenc:string"/>
+          <element name="URLMax" nillable="true" type="soapenc:string"/>
+          <element name="URLMin" nillable="true" type="soapenc:string"/>
+          <element name="URLPortlet" nillable="true" type="soapenc:string"/>
+          <element name="URLPortletCss" nillable="true" type="soapenc:string"/>
+          <element name="URLPrint" nillable="true" type="soapenc:string"/>
+          <element name="URLRefresh" nillable="true" type="soapenc:string"/>
+          <element name="access" type="xsd:boolean"/>
+          <element name="active" type="xsd:boolean"/>
+          <element name="columnCount" type="xsd:int"/>
+          <element name="columnId" nillable="true" type="soapenc:string"/>
+          <element name="columnPos" type="xsd:int"/>
+          <element name="content" nillable="true" type="tns11:StringBundler"/>
+          <element name="controlPanelCategory" nillable="true" type="soapenc:string"/>
+          <element name="customCSSClassName" nillable="true" type="soapenc:string"/>
+          <element name="description" nillable="true" type="soapenc:string"/>
+          <element name="focused" type="xsd:boolean"/>
+          <element name="id" nillable="true" type="soapenc:string"/>
+          <element name="instanceId" nillable="true" type="soapenc:string"/>
+          <element name="modeAbout" type="xsd:boolean"/>
+          <element name="modeConfig" type="xsd:boolean"/>
+          <element name="modeEdit" type="xsd:boolean"/>
+          <element name="modeEditDefaults" type="xsd:boolean"/>
+          <element name="modeEditGuest" type="xsd:boolean"/>
+          <element name="modeHelp" type="xsd:boolean"/>
+          <element name="modePreview" type="xsd:boolean"/>
+          <element name="modePrint" type="xsd:boolean"/>
+          <element name="modeView" type="xsd:boolean"/>
+          <element name="namespace" nillable="true" type="soapenc:string"/>
+          <element name="portletName" nillable="true" type="soapenc:string"/>
+          <element name="portletSetup" nillable="true" type="xsd:anyType"/>
+          <element name="resourcePK" nillable="true" type="soapenc:string"/>
+          <element name="restoreCurrentView" type="xsd:boolean"/>
+          <element name="rootPortletId" nillable="true" type="soapenc:string"/>
+          <element name="showBackIcon" type="xsd:boolean"/>
+          <element name="showCloseIcon" type="xsd:boolean"/>
+          <element name="showConfigurationIcon" type="xsd:boolean"/>
+          <element name="showEditDefaultsIcon" type="xsd:boolean"/>
+          <element name="showEditGuestIcon" type="xsd:boolean"/>
+          <element name="showEditIcon" type="xsd:boolean"/>
+          <element name="showExportImportIcon" type="xsd:boolean"/>
+          <element name="showHelpIcon" type="xsd:boolean"/>
+          <element name="showMaxIcon" type="xsd:boolean"/>
+          <element name="showMinIcon" type="xsd:boolean"/>
+          <element name="showMoveIcon" type="xsd:boolean"/>
+          <element name="showPortletCssIcon" type="xsd:boolean"/>
+          <element name="showPortletIcon" type="xsd:boolean"/>
+          <element name="showPrintIcon" type="xsd:boolean"/>
+          <element name="showRefreshIcon" type="xsd:boolean"/>
+          <element name="stateExclusive" type="xsd:boolean"/>
+          <element name="stateMax" type="xsd:boolean"/>
+          <element name="stateMin" type="xsd:boolean"/>
+          <element name="stateNormal" type="xsd:boolean"/>
+          <element name="statePopUp" type="xsd:boolean"/>
+          <element name="themeDisplay" nillable="true" type="tns6:ThemeDisplay"/>
+          <element name="title" nillable="true" type="soapenc:string"/>
+          <element name="webDAVEnabled" type="xsd:boolean"/>
+        </sequence>
+      </complexType>
+      <complexType name="ThemeDisplay">
+        <sequence>
+          <element name="CDNBaseURL" nillable="true" type="soapenc:string"/>
+          <element name="CDNDynamicResourcesHost" nillable="true" type="soapenc:string"/>
+          <element name="CDNHost" nillable="true" type="soapenc:string"/>
+          <element name="MDRRuleGroupInstance" nillable="true" type="xsd:anyType"/>
+          <element name="URLAddContent" nillable="true" type="soapenc:string"/>
+          <element name="URLControlPanel" nillable="true" type="soapenc:string"/>
+          <element name="URLCurrent" nillable="true" type="soapenc:string"/>
+          <element name="URLHome" nillable="true" type="soapenc:string"/>
+          <element name="URLLayoutTemplates" nillable="true" type="soapenc:string"/>
+          <element name="URLManageSiteMemberships" nillable="true" type="xsd:anyType"/>
+          <element name="URLMyAccount" nillable="true" type="xsd:anyType"/>
+          <element name="URLPageSettings" nillable="true" type="xsd:anyType"/>
+          <element name="URLPortal" nillable="true" type="soapenc:string"/>
+          <element name="URLPublishToLive" nillable="true" type="xsd:anyType"/>
+          <element name="URLSignIn" nillable="true" type="soapenc:string"/>
+          <element name="URLSignOut" nillable="true" type="soapenc:string"/>
+          <element name="URLSiteAdministration" nillable="true" type="soapenc:string"/>
+          <element name="URLSiteContent" nillable="true" type="soapenc:string"/>
+          <element name="URLSiteMapSettings" nillable="true" type="xsd:anyType"/>
+          <element name="URLSiteSettings" nillable="true" type="xsd:anyType"/>
+          <element name="URLUpdateManager" nillable="true" type="xsd:anyType"/>
+          <element name="account" nillable="true" type="xsd:anyType"/>
+          <element name="addSessionIdToURL" type="xsd:boolean"/>
+          <element name="ajax" type="xsd:boolean"/>
+          <element name="colorScheme" nillable="true" type="xsd:anyType"/>
+          <element name="colorSchemeId" nillable="true" type="soapenc:string"/>
+          <element name="company" nillable="true" type="xsd:anyType"/>
+          <element name="companyGroupId" type="xsd:long"/>
+          <element name="companyId" type="xsd:long"/>
+          <element name="companyLogo" nillable="true" type="soapenc:string"/>
+          <element name="companyLogoHeight" type="xsd:int"/>
+          <element name="companyLogoWidth" type="xsd:int"/>
+          <element name="contact" nillable="true" type="xsd:anyType"/>
+          <element name="controlPanelCategory" nillable="true" type="soapenc:string"/>
+          <element name="defaultUser" nillable="true" type="xsd:anyType"/>
+          <element name="defaultUserId" type="xsd:long"/>
+          <element name="device" nillable="true" type="xsd:anyType"/>
+          <element name="doAsGroupId" type="xsd:long"/>
+          <element name="doAsUserId" nillable="true" type="soapenc:string"/>
+          <element name="doAsUserLanguageId" nillable="true" type="soapenc:string"/>
+          <element name="facebook" type="xsd:boolean"/>
+          <element name="facebookCanvasPageURL" nillable="true" type="soapenc:string"/>
+          <element name="freeformLayout" type="xsd:boolean"/>
+          <element name="i18n" type="xsd:boolean"/>
+          <element name="i18nLanguageId" nillable="true" type="soapenc:string"/>
+          <element name="i18nPath" nillable="true" type="soapenc:string"/>
+          <element name="impersonated" type="xsd:boolean"/>
+          <element name="includePortletCssJs" type="xsd:boolean"/>
+          <element name="isolated" type="xsd:boolean"/>
+          <element name="languageId" nillable="true" type="soapenc:string"/>
+          <element name="layout" nillable="true" type="xsd:anyType"/>
+          <element name="layoutSet" nillable="true" type="xsd:anyType"/>
+          <element name="layoutSetLogo" nillable="true" type="soapenc:string"/>
+          <element name="layoutTypePortlet" nillable="true" type="xsd:anyType"/>
+          <element name="layouts" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+          <element name="lifecycle" nillable="true" type="soapenc:string"/>
+          <element name="lifecycleAction" type="xsd:boolean"/>
+          <element name="lifecycleEvent" type="xsd:boolean"/>
+          <element name="lifecycleRender" type="xsd:boolean"/>
+          <element name="lifecycleResource" type="xsd:boolean"/>
+          <element name="locale" nillable="true" type="xsd:anyType"/>
+          <element name="parentGroup" nillable="true" type="xsd:anyType"/>
+          <element name="parentGroupId" type="xsd:long"/>
+          <element name="parentGroupName" nillable="true" type="soapenc:string"/>
+          <element name="pathApplet" nillable="true" type="soapenc:string"/>
+          <element name="pathCms" nillable="true" type="soapenc:string"/>
+          <element name="pathColorSchemeImages" nillable="true" type="soapenc:string"/>
+          <element name="pathContext" nillable="true" type="soapenc:string"/>
+          <element name="pathFlash" nillable="true" type="soapenc:string"/>
+          <element name="pathFriendlyURLPrivateGroup" nillable="true" type="soapenc:string"/>
+          <element name="pathFriendlyURLPrivateUser" nillable="true" type="soapenc:string"/>
+          <element name="pathFriendlyURLPublic" nillable="true" type="soapenc:string"/>
+          <element name="pathImage" nillable="true" type="soapenc:string"/>
+          <element name="pathJavaScript" nillable="true" type="soapenc:string"/>
+          <element name="pathMain" nillable="true" type="soapenc:string"/>
+          <element name="pathSound" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeCss" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeImage" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeImages" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeJavaScript" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeRoot" nillable="true" type="soapenc:string"/>
+          <element name="pathThemeTemplates" nillable="true" type="soapenc:string"/>
+          <element name="permissionChecker" nillable="true" type="xsd:anyType"/>
+          <element name="plid" type="xsd:long"/>
+          <element name="portalURL" nillable="true" type="soapenc:string"/>
+          <element name="portletDisplay" nillable="true" type="tns6:PortletDisplay"/>
+          <element name="portletGroupId" type="xsd:long"/>
+          <element name="ppid" nillable="true" type="soapenc:string"/>
+          <element name="realCompanyLogo" nillable="true" type="soapenc:string"/>
+          <element name="realCompanyLogoHeight" type="xsd:int"/>
+          <element name="realCompanyLogoWidth" type="xsd:int"/>
+          <element name="realUser" nillable="true" type="xsd:anyType"/>
+          <element name="realUserId" type="xsd:long"/>
+          <element name="refererGroupId" type="xsd:long"/>
+          <element name="refererPlid" type="xsd:long"/>
+          <element name="request" nillable="true" type="xsd:anyType"/>
+          <element name="scopeGroup" nillable="true" type="xsd:anyType"/>
+          <element name="scopeGroupId" type="xsd:long"/>
+          <element name="scopeGroupIdOrLiveGroupId" type="xsd:long"/>
+          <element name="scopeGroupName" nillable="true" type="soapenc:string"/>
+          <element name="scopeLayout" nillable="true" type="xsd:anyType"/>
+          <element name="secure" type="xsd:boolean"/>
+          <element name="serverName" nillable="true" type="soapenc:string"/>
+          <element name="serverPort" type="xsd:int"/>
+          <element name="sessionId" nillable="true" type="soapenc:string"/>
+          <element name="showAddContentIcon" type="xsd:boolean"/>
+          <element name="showAddContentIconPermission" type="xsd:boolean"/>
+          <element name="showControlPanelIcon" type="xsd:boolean"/>
+          <element name="showHomeIcon" type="xsd:boolean"/>
+          <element name="showLayoutTemplatesIcon" type="xsd:boolean"/>
+          <element name="showManageSiteMembershipsIcon" type="xsd:boolean"/>
+          <element name="showMyAccountIcon" type="xsd:boolean"/>
+          <element name="showPageCustomizationIcon" type="xsd:boolean"/>
+          <element name="showPageSettingsIcon" type="xsd:boolean"/>
+          <element name="showPortalIcon" type="xsd:boolean"/>
+          <element name="showSignInIcon" type="xsd:boolean"/>
+          <element name="showSignOutIcon" type="xsd:boolean"/>
+          <element name="showSiteAdministrationIcon" type="xsd:boolean"/>
+          <element name="showSiteContentIcon" type="xsd:boolean"/>
+          <element name="showSiteMapSettingsIcon" type="xsd:boolean"/>
+          <element name="showSiteSettingsIcon" type="xsd:boolean"/>
+          <element name="showStagingIcon" type="xsd:boolean"/>
+          <element name="signedIn" type="xsd:boolean"/>
+          <element name="siteDefaultLocale" nillable="true" type="xsd:anyType"/>
+          <element name="siteGroup" nillable="true" type="xsd:anyType"/>
+          <element name="siteGroupId" type="xsd:long"/>
+          <element name="siteGroupIdOrLiveGroupId" type="xsd:long"/>
+          <element name="siteGroupName" nillable="true" type="soapenc:string"/>
+          <element name="stateExclusive" type="xsd:boolean"/>
+          <element name="stateMaximized" type="xsd:boolean"/>
+          <element name="statePopUp" type="xsd:boolean"/>
+          <element name="theme" nillable="true" type="xsd:anyType"/>
+          <element name="themeCssFastLoad" type="xsd:boolean"/>
+          <element name="themeId" nillable="true" type="soapenc:string"/>
+          <element name="themeImagesFastLoad" type="xsd:boolean"/>
+          <element name="themeJsBarebone" type="xsd:boolean"/>
+          <element name="themeJsFastLoad" type="xsd:boolean"/>
+          <element name="themeSettings" nillable="true" type="xsd:anyType"/>
+          <element name="tilesContent" nillable="true" type="soapenc:string"/>
+          <element name="tilesSelectable" type="xsd:boolean"/>
+          <element name="tilesTitle" nillable="true" type="soapenc:string"/>
+          <element name="timeZone" nillable="true" type="xsd:anyType"/>
+          <element name="unfilteredLayouts" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+          <element name="user" nillable="true" type="xsd:anyType"/>
+          <element name="userId" type="xsd:long"/>
+          <element name="wapTheme" type="xsd:boolean"/>
+          <element name="widget" type="xsd:boolean"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://service.portal.liferay.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://model.publication.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="ServiceContext">
+        <sequence>
+          <element name="addCommunityPermissions" type="xsd:boolean"/>
+          <element name="addGroupPermissions" type="xsd:boolean"/>
+          <element name="addGuestPermissions" type="xsd:boolean"/>
+          <element name="assetCategoryIds" nillable="true" type="impl:ArrayOf_xsd_long"/>
+          <element name="assetEntryVisible" type="xsd:boolean"/>
+          <element name="assetLinkEntryIds" nillable="true" type="impl:ArrayOf_xsd_long"/>
+          <element name="assetTagNames" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="attributes" nillable="true" type="apachesoap:Map"/>
+          <element name="command" nillable="true" type="soapenc:string"/>
+          <element name="commandAdd" type="xsd:boolean"/>
+          <element name="commandUpdate" type="xsd:boolean"/>
+          <element name="communityPermissions" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="companyId" type="xsd:long"/>
+          <element name="createDate" nillable="true" type="xsd:dateTime"/>
+          <element name="currentURL" nillable="true" type="soapenc:string"/>
+          <element name="deriveDefaultPermissions" type="xsd:boolean"/>
+          <element name="expandoBridgeAttributes" nillable="true" type="apachesoap:Map"/>
+          <element name="failOnPortalException" type="xsd:boolean"/>
+          <element name="formDate" nillable="true" type="xsd:dateTime"/>
+          <element name="groupPermissions" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="guestOrUserId" type="xsd:long"/>
+          <element name="guestPermissions" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="headers" nillable="true" type="apachesoap:Map"/>
+          <element name="indexingEnabled" type="xsd:boolean"/>
+          <element name="languageId" nillable="true" type="soapenc:string"/>
+          <element name="layoutFullURL" nillable="true" type="soapenc:string"/>
+          <element name="layoutURL" nillable="true" type="soapenc:string"/>
+          <element name="liferayPortletRequest" nillable="true" type="xsd:anyType"/>
+          <element name="liferayPortletResponse" nillable="true" type="xsd:anyType"/>
+          <element name="locale" nillable="true" type="xsd:anyType"/>
+          <element name="modifiedDate" nillable="true" type="xsd:dateTime"/>
+          <element name="pathFriendlyURLPrivateGroup" nillable="true" type="soapenc:string"/>
+          <element name="pathFriendlyURLPrivateUser" nillable="true" type="soapenc:string"/>
+          <element name="pathFriendlyURLPublic" nillable="true" type="soapenc:string"/>
+          <element name="pathMain" nillable="true" type="soapenc:string"/>
+          <element name="plid" type="xsd:long"/>
+          <element name="portalURL" nillable="true" type="soapenc:string"/>
+          <element name="portletId" nillable="true" type="soapenc:string"/>
+          <element name="portletPreferencesIds" nillable="true" type="tns4:PortletPreferencesIds"/>
+          <element name="remoteAddr" nillable="true" type="soapenc:string"/>
+          <element name="remoteHost" nillable="true" type="soapenc:string"/>
+          <element name="request" nillable="true" type="xsd:anyType"/>
+          <element name="response" nillable="true" type="xsd:anyType"/>
+          <element name="rootPortletId" nillable="true" type="soapenc:string"/>
+          <element name="scopeGroup" nillable="true" type="xsd:anyType"/>
+          <element name="scopeGroupId" type="xsd:long"/>
+          <element name="signedIn" type="xsd:boolean"/>
+          <element name="themeDisplay" nillable="true" type="tns6:ThemeDisplay"/>
+          <element name="timeZone" nillable="true" type="xsd:anyType"/>
+          <element name="userAgent" nillable="true" type="soapenc:string"/>
+          <element name="userDisplayURL" nillable="true" type="soapenc:string"/>
+          <element name="userId" type="xsd:long"/>
+          <element name="uuid" nillable="true" type="soapenc:string"/>
+          <element name="workflowAction" type="xsd:int"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://model.publication.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://permission.security.portal.liferay.com"/>
+      <import namespace="http://portlet.kernel.portal.liferay.com"/>
+      <import namespace="http://util.kernel.portal.liferay.com"/>
+      <import namespace="http://service.portal.liferay.com"/>
+      <import namespace="http://http.servlet.javax"/>
+      <import namespace="urn:http.service.publication.com"/>
+      <import namespace="http://model.portal.liferay.com"/>
+      <import namespace="http://portlet.javax"/>
+      <import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+      <import namespace="http://util.java"/>
+      <import namespace="http://model.mobiledevicerules.portlet.liferay.com"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://theme.portal.liferay.com"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="PublicationSoap">
+        <sequence>
+          <element name="authorId" type="xsd:long"/>
+          <element name="authorname" nillable="true" type="soapenc:string"/>
+          <element name="authorphoto" nillable="true" type="soapenc:string"/>
+          <element name="beneficiaireId" type="xsd:long"/>
+          <element name="comment" type="xsd:boolean"/>
+          <element name="content" nillable="true" type="soapenc:string"/>
+          <element name="date" nillable="true" type="xsd:dateTime"/>
+          <element name="domain" nillable="true" type="soapenc:string"/>
+          <element name="parentId" type="xsd:long"/>
+          <element name="primaryKey" type="xsd:long"/>
+          <element name="publicationId" type="xsd:long"/>
+          <element name="statut" nillable="true" type="soapenc:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="updatePublicationRequest">
+    <wsdl:part name="publicationId" type="xsd:long"/>
+    <wsdl:part name="content" type="xsd:string"/>
+    <wsdl:part name="locationId" type="xsd:long"/>
+    <wsdl:part name="serviceContext" type="tns1:ServiceContext"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationRequest">
+    <wsdl:part name="publicationId" type="xsd:long"/>
+  </wsdl:message>
+  <wsdl:message name="addPublicationRequest">
+    <wsdl:part name="authorId" type="xsd:long"/>
+    <wsdl:part name="beneficiaireId" type="xsd:long"/>
+    <wsdl:part name="domain" type="xsd:string"/>
+    <wsdl:part name="content" type="xsd:string"/>
+    <wsdl:part name="parentId" type="xsd:long"/>
+    <wsdl:part name="comment" type="xsd:boolean"/>
+    <wsdl:part name="serviceContext" type="tns1:ServiceContext"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationsByBeneficiaireRequest">
+    <wsdl:part name="beneficiaireId" type="xsd:long"/>
+  </wsdl:message>
+  <wsdl:message name="deletePublicationResponse">
+    <wsdl:part name="deletePublicationReturn" type="tns12:PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationsByDomainRequest">
+    <wsdl:part name="domain" type="xsd:string"/>
+    <wsdl:part name="start" type="xsd:int"/>
+    <wsdl:part name="end" type="xsd:int"/>
+  </wsdl:message>
+  <wsdl:message name="deletePublicationRequest">
+    <wsdl:part name="publicationId" type="xsd:long"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationResponse">
+    <wsdl:part name="getPublicationReturn" type="tns12:PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:message name="addPublicationResponse">
+    <wsdl:part name="addPublicationReturn" type="tns12:PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationsByDomainResponse">
+    <wsdl:part name="getPublicationsByDomainReturn" type="impl:ArrayOf_tns2_PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:message name="getPublicationsByBeneficiaireResponse">
+    <wsdl:part name="getPublicationsByBeneficiaireReturn" type="impl:ArrayOf_tns2_PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:message name="updatePublicationResponse">
+    <wsdl:part name="updatePublicationReturn" type="tns12:PublicationSoap"/>
+  </wsdl:message>
+  <wsdl:portType name="PublicationServiceSoap">
+    <wsdl:operation name="addPublication" parameterOrder="authorId beneficiaireId domain content parentId comment serviceContext">
+      <wsdl:input message="impl:addPublicationRequest" name="addPublicationRequest"/>
+      <wsdl:output message="impl:addPublicationResponse" name="addPublicationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deletePublication" parameterOrder="publicationId">
+      <wsdl:input message="impl:deletePublicationRequest" name="deletePublicationRequest"/>
+      <wsdl:output message="impl:deletePublicationResponse" name="deletePublicationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getPublication" parameterOrder="publicationId">
+      <wsdl:input message="impl:getPublicationRequest" name="getPublicationRequest"/>
+      <wsdl:output message="impl:getPublicationResponse" name="getPublicationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicationsByBeneficiaire" parameterOrder="beneficiaireId">
+      <wsdl:input message="impl:getPublicationsByBeneficiaireRequest" name="getPublicationsByBeneficiaireRequest"/>
+      <wsdl:output message="impl:getPublicationsByBeneficiaireResponse" name="getPublicationsByBeneficiaireResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicationsByDomain" parameterOrder="domain start end">
+      <wsdl:input message="impl:getPublicationsByDomainRequest" name="getPublicationsByDomainRequest"/>
+      <wsdl:output message="impl:getPublicationsByDomainResponse" name="getPublicationsByDomainResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updatePublication" parameterOrder="publicationId content locationId serviceContext">
+      <wsdl:input message="impl:updatePublicationRequest" name="updatePublicationRequest"/>
+      <wsdl:output message="impl:updatePublicationResponse" name="updatePublicationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Plugin_publication_PublicationServiceSoapBinding" type="impl:PublicationServiceSoap">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addPublication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addPublicationRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="addPublicationResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePublication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="deletePublicationRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="deletePublicationResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getPublicationRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getPublicationResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicationsByBeneficiaire">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getPublicationsByBeneficiaireRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getPublicationsByBeneficiaireResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicationsByDomain">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getPublicationsByDomainRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getPublicationsByDomainResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePublication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updatePublicationRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="updatePublicationResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.publication.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublicationServiceSoapService">
+    <wsdl:port binding="impl:Plugin_publication_PublicationServiceSoapBinding" name="Plugin_publication_PublicationService">
+      <wsdlsoap:address location="http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://Romain-PC:8081/publications</con:endpoint><con:endpoint>http://Romain-PC:8088/publications</con:endpoint><con:endpoint>http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="addPublication" bindingOperationName="addPublication" type="Request-Response" outputName="addPublicationResponse" inputName="addPublicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addPublication soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <authorId xsi:type="xsd:long">?</authorId>
+         <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+         <domain xsi:type="xsd:string">?</domain>
+         <content xsi:type="xsd:string">?</content>
+         <parentId xsi:type="xsd:long">?</parentId>
+         <comment xsi:type="xsd:boolean">?</comment>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+            <addCommunityPermissions xsi:type="xsd:boolean">?</addCommunityPermissions>
+            <addGroupPermissions xsi:type="xsd:boolean">?</addGroupPermissions>
+            <addGuestPermissions xsi:type="xsd:boolean">?</addGuestPermissions>
+            <assetCategoryIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+            <assetEntryVisible xsi:type="xsd:boolean">?</assetEntryVisible>
+            <assetLinkEntryIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+            <assetTagNames xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <attributes xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </attributes>
+            <command xsi:type="soapenc:string">?</command>
+            <commandAdd xsi:type="xsd:boolean">?</commandAdd>
+            <commandUpdate xsi:type="xsd:boolean">?</commandUpdate>
+            <communityPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <companyId xsi:type="xsd:long">?</companyId>
+            <createDate xsi:type="xsd:dateTime">?</createDate>
+            <currentURL xsi:type="soapenc:string">?</currentURL>
+            <deriveDefaultPermissions xsi:type="xsd:boolean">?</deriveDefaultPermissions>
+            <expandoBridgeAttributes xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </expandoBridgeAttributes>
+            <failOnPortalException xsi:type="xsd:boolean">?</failOnPortalException>
+            <formDate xsi:type="xsd:dateTime">?</formDate>
+            <groupPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <guestOrUserId xsi:type="xsd:long">?</guestOrUserId>
+            <guestPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <headers xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </headers>
+            <indexingEnabled xsi:type="xsd:boolean">?</indexingEnabled>
+            <languageId xsi:type="soapenc:string">?</languageId>
+            <layoutFullURL xsi:type="soapenc:string">?</layoutFullURL>
+            <layoutURL xsi:type="soapenc:string">?</layoutURL>
+            <liferayPortletRequest xsi:type="xsd:anyType">?</liferayPortletRequest>
+            <liferayPortletResponse xsi:type="xsd:anyType">?</liferayPortletResponse>
+            <locale xsi:type="xsd:anyType">?</locale>
+            <modifiedDate xsi:type="xsd:dateTime">?</modifiedDate>
+            <pathFriendlyURLPrivateGroup xsi:type="soapenc:string">?</pathFriendlyURLPrivateGroup>
+            <pathFriendlyURLPrivateUser xsi:type="soapenc:string">?</pathFriendlyURLPrivateUser>
+            <pathFriendlyURLPublic xsi:type="soapenc:string">?</pathFriendlyURLPublic>
+            <pathMain xsi:type="soapenc:string">?</pathMain>
+            <plid xsi:type="xsd:long">?</plid>
+            <portalURL xsi:type="soapenc:string">?</portalURL>
+            <portletId xsi:type="soapenc:string">?</portletId>
+            <portletPreferencesIds xsi:type="mod:PortletPreferencesIds" xmlns:mod="http://model.portal.liferay.com">
+               <companyId xsi:type="xsd:long">?</companyId>
+               <ownerId xsi:type="xsd:long">?</ownerId>
+               <ownerType xsi:type="xsd:int">?</ownerType>
+               <plid xsi:type="xsd:long">?</plid>
+               <portletId xsi:type="soapenc:string">?</portletId>
+            </portletPreferencesIds>
+            <remoteAddr xsi:type="soapenc:string">?</remoteAddr>
+            <remoteHost xsi:type="soapenc:string">?</remoteHost>
+            <request xsi:type="xsd:anyType">?</request>
+            <response xsi:type="xsd:anyType">?</response>
+            <rootPortletId xsi:type="soapenc:string">?</rootPortletId>
+            <scopeGroup xsi:type="xsd:anyType">?</scopeGroup>
+            <scopeGroupId xsi:type="xsd:long">?</scopeGroupId>
+            <signedIn xsi:type="xsd:boolean">?</signedIn>
+            <themeDisplay xsi:type="them:ThemeDisplay" xmlns:them="http://theme.portal.liferay.com">
+               <CDNBaseURL xsi:type="soapenc:string">?</CDNBaseURL>
+               <CDNDynamicResourcesHost xsi:type="soapenc:string">?</CDNDynamicResourcesHost>
+               <CDNHost xsi:type="soapenc:string">?</CDNHost>
+               <MDRRuleGroupInstance xsi:type="xsd:anyType">?</MDRRuleGroupInstance>
+               <URLAddContent xsi:type="soapenc:string">?</URLAddContent>
+               <URLControlPanel xsi:type="soapenc:string">?</URLControlPanel>
+               <URLCurrent xsi:type="soapenc:string">?</URLCurrent>
+               <URLHome xsi:type="soapenc:string">?</URLHome>
+               <URLLayoutTemplates xsi:type="soapenc:string">?</URLLayoutTemplates>
+               <URLManageSiteMemberships xsi:type="xsd:anyType">?</URLManageSiteMemberships>
+               <URLMyAccount xsi:type="xsd:anyType">?</URLMyAccount>
+               <URLPageSettings xsi:type="xsd:anyType">?</URLPageSettings>
+               <URLPortal xsi:type="soapenc:string">?</URLPortal>
+               <URLPublishToLive xsi:type="xsd:anyType">?</URLPublishToLive>
+               <URLSignIn xsi:type="soapenc:string">?</URLSignIn>
+               <URLSignOut xsi:type="soapenc:string">?</URLSignOut>
+               <URLSiteAdministration xsi:type="soapenc:string">?</URLSiteAdministration>
+               <URLSiteContent xsi:type="soapenc:string">?</URLSiteContent>
+               <URLSiteMapSettings xsi:type="xsd:anyType">?</URLSiteMapSettings>
+               <URLSiteSettings xsi:type="xsd:anyType">?</URLSiteSettings>
+               <URLUpdateManager xsi:type="xsd:anyType">?</URLUpdateManager>
+               <account xsi:type="xsd:anyType">?</account>
+               <addSessionIdToURL xsi:type="xsd:boolean">?</addSessionIdToURL>
+               <ajax xsi:type="xsd:boolean">?</ajax>
+               <colorScheme xsi:type="xsd:anyType">?</colorScheme>
+               <colorSchemeId xsi:type="soapenc:string">?</colorSchemeId>
+               <company xsi:type="xsd:anyType">?</company>
+               <companyGroupId xsi:type="xsd:long">?</companyGroupId>
+               <companyId xsi:type="xsd:long">?</companyId>
+               <companyLogo xsi:type="soapenc:string">?</companyLogo>
+               <companyLogoHeight xsi:type="xsd:int">?</companyLogoHeight>
+               <companyLogoWidth xsi:type="xsd:int">?</companyLogoWidth>
+               <contact xsi:type="xsd:anyType">?</contact>
+               <controlPanelCategory xsi:type="soapenc:string">?</controlPanelCategory>
+               <defaultUser xsi:type="xsd:anyType">?</defaultUser>
+               <defaultUserId xsi:type="xsd:long">?</defaultUserId>
+               <device xsi:type="xsd:anyType">?</device>
+               <doAsGroupId xsi:type="xsd:long">?</doAsGroupId>
+               <doAsUserId xsi:type="soapenc:string">?</doAsUserId>
+               <doAsUserLanguageId xsi:type="soapenc:string">?</doAsUserLanguageId>
+               <facebook xsi:type="xsd:boolean">?</facebook>
+               <facebookCanvasPageURL xsi:type="soapenc:string">?</facebookCanvasPageURL>
+               <freeformLayout xsi:type="xsd:boolean">?</freeformLayout>
+               <i18n xsi:type="xsd:boolean">?</i18n>
+               <i18nLanguageId xsi:type="soapenc:string">?</i18nLanguageId>
+               <i18nPath xsi:type="soapenc:string">?</i18nPath>
+               <impersonated xsi:type="xsd:boolean">?</impersonated>
+               <includePortletCssJs xsi:type="xsd:boolean">?</includePortletCssJs>
+               <isolated xsi:type="xsd:boolean">?</isolated>
+               <languageId xsi:type="soapenc:string">?</languageId>
+               <layout xsi:type="xsd:anyType">?</layout>
+               <layoutSet xsi:type="xsd:anyType">?</layoutSet>
+               <layoutSetLogo xsi:type="soapenc:string">?</layoutSetLogo>
+               <layoutTypePortlet xsi:type="xsd:anyType">?</layoutTypePortlet>
+               <layouts xsi:type="urn:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]"/>
+               <lifecycle xsi:type="soapenc:string">?</lifecycle>
+               <lifecycleAction xsi:type="xsd:boolean">?</lifecycleAction>
+               <lifecycleEvent xsi:type="xsd:boolean">?</lifecycleEvent>
+               <lifecycleRender xsi:type="xsd:boolean">?</lifecycleRender>
+               <lifecycleResource xsi:type="xsd:boolean">?</lifecycleResource>
+               <locale xsi:type="xsd:anyType">?</locale>
+               <parentGroup xsi:type="xsd:anyType">?</parentGroup>
+               <parentGroupId xsi:type="xsd:long">?</parentGroupId>
+               <parentGroupName xsi:type="soapenc:string">?</parentGroupName>
+               <pathApplet xsi:type="soapenc:string">?</pathApplet>
+               <pathCms xsi:type="soapenc:string">?</pathCms>
+               <pathColorSchemeImages xsi:type="soapenc:string">?</pathColorSchemeImages>
+               <pathContext xsi:type="soapenc:string">?</pathContext>
+               <pathFlash xsi:type="soapenc:string">?</pathFlash>
+               <pathFriendlyURLPrivateGroup xsi:type="soapenc:string">?</pathFriendlyURLPrivateGroup>
+               <pathFriendlyURLPrivateUser xsi:type="soapenc:string">?</pathFriendlyURLPrivateUser>
+               <pathFriendlyURLPublic xsi:type="soapenc:string">?</pathFriendlyURLPublic>
+               <pathImage xsi:type="soapenc:string">?</pathImage>
+               <pathJavaScript xsi:type="soapenc:string">?</pathJavaScript>
+               <pathMain xsi:type="soapenc:string">?</pathMain>
+               <pathSound xsi:type="soapenc:string">?</pathSound>
+               <pathThemeCss xsi:type="soapenc:string">?</pathThemeCss>
+               <pathThemeImage xsi:type="soapenc:string">?</pathThemeImage>
+               <pathThemeImages xsi:type="soapenc:string">?</pathThemeImages>
+               <pathThemeJavaScript xsi:type="soapenc:string">?</pathThemeJavaScript>
+               <pathThemeRoot xsi:type="soapenc:string">?</pathThemeRoot>
+               <pathThemeTemplates xsi:type="soapenc:string">?</pathThemeTemplates>
+               <permissionChecker xsi:type="xsd:anyType">?</permissionChecker>
+               <plid xsi:type="xsd:long">?</plid>
+               <portalURL xsi:type="soapenc:string">?</portalURL>
+               <portletDisplay xsi:type="them:PortletDisplay">
+                  <URLBack xsi:type="soapenc:string">?</URLBack>
+                  <URLClose xsi:type="soapenc:string">?</URLClose>
+                  <URLConfiguration xsi:type="soapenc:string">?</URLConfiguration>
+                  <URLConfigurationJS xsi:type="soapenc:string">?</URLConfigurationJS>
+                  <URLEdit xsi:type="soapenc:string">?</URLEdit>
+                  <URLEditDefaults xsi:type="soapenc:string">?</URLEditDefaults>
+                  <URLEditGuest xsi:type="soapenc:string">?</URLEditGuest>
+                  <URLExportImport xsi:type="soapenc:string">?</URLExportImport>
+                  <URLHelp xsi:type="soapenc:string">?</URLHelp>
+                  <URLMax xsi:type="soapenc:string">?</URLMax>
+                  <URLMin xsi:type="soapenc:string">?</URLMin>
+                  <URLPortlet xsi:type="soapenc:string">?</URLPortlet>
+                  <URLPortletCss xsi:type="soapenc:string">?</URLPortletCss>
+                  <URLPrint xsi:type="soapenc:string">?</URLPrint>
+                  <URLRefresh xsi:type="soapenc:string">?</URLRefresh>
+                  <access xsi:type="xsd:boolean">?</access>
+                  <active xsi:type="xsd:boolean">?</active>
+                  <columnCount xsi:type="xsd:int">?</columnCount>
+                  <columnId xsi:type="soapenc:string">?</columnId>
+                  <columnPos xsi:type="xsd:int">?</columnPos>
+                  <content xsi:type="util:StringBundler" xmlns:util="http://util.kernel.portal.liferay.com">
+                     <index xsi:type="xsd:int">?</index>
+                  </content>
+                  <controlPanelCategory xsi:type="soapenc:string">?</controlPanelCategory>
+                  <customCSSClassName xsi:type="soapenc:string">?</customCSSClassName>
+                  <description xsi:type="soapenc:string">?</description>
+                  <focused xsi:type="xsd:boolean">?</focused>
+                  <id xsi:type="soapenc:string">?</id>
+                  <instanceId xsi:type="soapenc:string">?</instanceId>
+                  <modeAbout xsi:type="xsd:boolean">?</modeAbout>
+                  <modeConfig xsi:type="xsd:boolean">?</modeConfig>
+                  <modeEdit xsi:type="xsd:boolean">?</modeEdit>
+                  <modeEditDefaults xsi:type="xsd:boolean">?</modeEditDefaults>
+                  <modeEditGuest xsi:type="xsd:boolean">?</modeEditGuest>
+                  <modeHelp xsi:type="xsd:boolean">?</modeHelp>
+                  <modePreview xsi:type="xsd:boolean">?</modePreview>
+                  <modePrint xsi:type="xsd:boolean">?</modePrint>
+                  <modeView xsi:type="xsd:boolean">?</modeView>
+                  <namespace xsi:type="soapenc:string">?</namespace>
+                  <portletName xsi:type="soapenc:string">?</portletName>
+                  <portletSetup xsi:type="xsd:anyType">?</portletSetup>
+                  <resourcePK xsi:type="soapenc:string">?</resourcePK>
+                  <restoreCurrentView xsi:type="xsd:boolean">?</restoreCurrentView>
+                  <rootPortletId xsi:type="soapenc:string">?</rootPortletId>
+                  <showBackIcon xsi:type="xsd:boolean">?</showBackIcon>
+                  <showCloseIcon xsi:type="xsd:boolean">?</showCloseIcon>
+                  <showConfigurationIcon xsi:type="xsd:boolean">?</showConfigurationIcon>
+                  <showEditDefaultsIcon xsi:type="xsd:boolean">?</showEditDefaultsIcon>
+                  <showEditGuestIcon xsi:type="xsd:boolean">?</showEditGuestIcon>
+                  <showEditIcon xsi:type="xsd:boolean">?</showEditIcon>
+                  <showExportImportIcon xsi:type="xsd:boolean">?</showExportImportIcon>
+                  <showHelpIcon xsi:type="xsd:boolean">?</showHelpIcon>
+                  <showMaxIcon xsi:type="xsd:boolean">?</showMaxIcon>
+                  <showMinIcon xsi:type="xsd:boolean">?</showMinIcon>
+                  <showMoveIcon xsi:type="xsd:boolean">?</showMoveIcon>
+                  <showPortletCssIcon xsi:type="xsd:boolean">?</showPortletCssIcon>
+                  <showPortletIcon xsi:type="xsd:boolean">?</showPortletIcon>
+                  <showPrintIcon xsi:type="xsd:boolean">?</showPrintIcon>
+                  <showRefreshIcon xsi:type="xsd:boolean">?</showRefreshIcon>
+                  <stateExclusive xsi:type="xsd:boolean">?</stateExclusive>
+                  <stateMax xsi:type="xsd:boolean">?</stateMax>
+                  <stateMin xsi:type="xsd:boolean">?</stateMin>
+                  <stateNormal xsi:type="xsd:boolean">?</stateNormal>
+                  <statePopUp xsi:type="xsd:boolean">?</statePopUp>
+                  <themeDisplay/>
+                  <title xsi:type="soapenc:string">?</title>
+                  <webDAVEnabled xsi:type="xsd:boolean">?</webDAVEnabled>
+               </portletDisplay>
+               <portletGroupId xsi:type="xsd:long">?</portletGroupId>
+               <ppid xsi:type="soapenc:string">?</ppid>
+               <realCompanyLogo xsi:type="soapenc:string">?</realCompanyLogo>
+               <realCompanyLogoHeight xsi:type="xsd:int">?</realCompanyLogoHeight>
+               <realCompanyLogoWidth xsi:type="xsd:int">?</realCompanyLogoWidth>
+               <realUser xsi:type="xsd:anyType">?</realUser>
+               <realUserId xsi:type="xsd:long">?</realUserId>
+               <refererGroupId xsi:type="xsd:long">?</refererGroupId>
+               <refererPlid xsi:type="xsd:long">?</refererPlid>
+               <request xsi:type="xsd:anyType">?</request>
+               <scopeGroup xsi:type="xsd:anyType">?</scopeGroup>
+               <scopeGroupId xsi:type="xsd:long">?</scopeGroupId>
+               <scopeGroupIdOrLiveGroupId xsi:type="xsd:long">?</scopeGroupIdOrLiveGroupId>
+               <scopeGroupName xsi:type="soapenc:string">?</scopeGroupName>
+               <scopeLayout xsi:type="xsd:anyType">?</scopeLayout>
+               <secure xsi:type="xsd:boolean">?</secure>
+               <serverName xsi:type="soapenc:string">?</serverName>
+               <serverPort xsi:type="xsd:int">?</serverPort>
+               <sessionId xsi:type="soapenc:string">?</sessionId>
+               <showAddContentIcon xsi:type="xsd:boolean">?</showAddContentIcon>
+               <showAddContentIconPermission xsi:type="xsd:boolean">?</showAddContentIconPermission>
+               <showControlPanelIcon xsi:type="xsd:boolean">?</showControlPanelIcon>
+               <showHomeIcon xsi:type="xsd:boolean">?</showHomeIcon>
+               <showLayoutTemplatesIcon xsi:type="xsd:boolean">?</showLayoutTemplatesIcon>
+               <showManageSiteMembershipsIcon xsi:type="xsd:boolean">?</showManageSiteMembershipsIcon>
+               <showMyAccountIcon xsi:type="xsd:boolean">?</showMyAccountIcon>
+               <showPageCustomizationIcon xsi:type="xsd:boolean">?</showPageCustomizationIcon>
+               <showPageSettingsIcon xsi:type="xsd:boolean">?</showPageSettingsIcon>
+               <showPortalIcon xsi:type="xsd:boolean">?</showPortalIcon>
+               <showSignInIcon xsi:type="xsd:boolean">?</showSignInIcon>
+               <showSignOutIcon xsi:type="xsd:boolean">?</showSignOutIcon>
+               <showSiteAdministrationIcon xsi:type="xsd:boolean">?</showSiteAdministrationIcon>
+               <showSiteContentIcon xsi:type="xsd:boolean">?</showSiteContentIcon>
+               <showSiteMapSettingsIcon xsi:type="xsd:boolean">?</showSiteMapSettingsIcon>
+               <showSiteSettingsIcon xsi:type="xsd:boolean">?</showSiteSettingsIcon>
+               <showStagingIcon xsi:type="xsd:boolean">?</showStagingIcon>
+               <signedIn xsi:type="xsd:boolean">?</signedIn>
+               <siteDefaultLocale xsi:type="xsd:anyType">?</siteDefaultLocale>
+               <siteGroup xsi:type="xsd:anyType">?</siteGroup>
+               <siteGroupId xsi:type="xsd:long">?</siteGroupId>
+               <siteGroupIdOrLiveGroupId xsi:type="xsd:long">?</siteGroupIdOrLiveGroupId>
+               <siteGroupName xsi:type="soapenc:string">?</siteGroupName>
+               <stateExclusive xsi:type="xsd:boolean">?</stateExclusive>
+               <stateMaximized xsi:type="xsd:boolean">?</stateMaximized>
+               <statePopUp xsi:type="xsd:boolean">?</statePopUp>
+               <theme xsi:type="xsd:anyType">?</theme>
+               <themeCssFastLoad xsi:type="xsd:boolean">?</themeCssFastLoad>
+               <themeId xsi:type="soapenc:string">?</themeId>
+               <themeImagesFastLoad xsi:type="xsd:boolean">?</themeImagesFastLoad>
+               <themeJsBarebone xsi:type="xsd:boolean">?</themeJsBarebone>
+               <themeJsFastLoad xsi:type="xsd:boolean">?</themeJsFastLoad>
+               <themeSettings xsi:type="xsd:anyType">?</themeSettings>
+               <tilesContent xsi:type="soapenc:string">?</tilesContent>
+               <tilesSelectable xsi:type="xsd:boolean">?</tilesSelectable>
+               <tilesTitle xsi:type="soapenc:string">?</tilesTitle>
+               <timeZone xsi:type="xsd:anyType">?</timeZone>
+               <unfilteredLayouts xsi:type="urn:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]"/>
+               <user xsi:type="xsd:anyType">?</user>
+               <userId xsi:type="xsd:long">?</userId>
+               <wapTheme xsi:type="xsd:boolean">?</wapTheme>
+               <widget xsi:type="xsd:boolean">?</widget>
+            </themeDisplay>
+            <timeZone xsi:type="xsd:anyType">?</timeZone>
+            <userAgent xsi:type="soapenc:string">?</userAgent>
+            <userDisplayURL xsi:type="soapenc:string">?</userDisplayURL>
+            <userId xsi:type="xsd:long">?</userId>
+            <uuid xsi:type="soapenc:string">?</uuid>
+            <workflowAction xsi:type="xsd:int">?</workflowAction>
+         </serviceContext>
+      </urn:addPublication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/addPublicationRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="deletePublication" bindingOperationName="deletePublication" type="Request-Response" outputName="deletePublicationResponse" inputName="deletePublicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deletePublication soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <publicationId xsi:type="xsd:long">?</publicationId>
+      </urn:deletePublication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/deletePublicationRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getPublication" bindingOperationName="getPublication" type="Request-Response" outputName="getPublicationResponse" inputName="getPublicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/publications</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublication soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <publicationId xsi:type="xsd:long">?</publicationId>
+      </urn:getPublication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getPublicationsByBeneficiaire" bindingOperationName="getPublicationsByBeneficiaire" type="Request-Response" outputName="getPublicationsByBeneficiaireResponse" inputName="getPublicationsByBeneficiaireRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://Romain-PC:8081/publications</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublicationsByBeneficiaire soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+      </urn:getPublicationsByBeneficiaire>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationsByBeneficiaireRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getPublicationsByDomain" bindingOperationName="getPublicationsByDomain" type="Request-Response" outputName="getPublicationsByDomainResponse" inputName="getPublicationsByDomainRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublicationsByDomain soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <domain xsi:type="xsd:string">?</domain>
+         <start xsi:type="xsd:int">?</start>
+         <end xsi:type="xsd:int">?</end>
+      </urn:getPublicationsByDomain>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationsByDomainRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="updatePublication" bindingOperationName="updatePublication" type="Request-Response" outputName="updatePublicationResponse" inputName="updatePublicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Publication-portlet/api/axis/Plugin_publication_PublicationService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updatePublication soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <publicationId xsi:type="xsd:long">?</publicationId>
+         <content xsi:type="xsd:string">?</content>
+         <locationId xsi:type="xsd:long">?</locationId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+            <addCommunityPermissions xsi:type="xsd:boolean">?</addCommunityPermissions>
+            <addGroupPermissions xsi:type="xsd:boolean">?</addGroupPermissions>
+            <addGuestPermissions xsi:type="xsd:boolean">?</addGuestPermissions>
+            <assetCategoryIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+            <assetEntryVisible xsi:type="xsd:boolean">?</assetEntryVisible>
+            <assetLinkEntryIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+            <assetTagNames xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <attributes xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </attributes>
+            <command xsi:type="soapenc:string">?</command>
+            <commandAdd xsi:type="xsd:boolean">?</commandAdd>
+            <commandUpdate xsi:type="xsd:boolean">?</commandUpdate>
+            <communityPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <companyId xsi:type="xsd:long">?</companyId>
+            <createDate xsi:type="xsd:dateTime">?</createDate>
+            <currentURL xsi:type="soapenc:string">?</currentURL>
+            <deriveDefaultPermissions xsi:type="xsd:boolean">?</deriveDefaultPermissions>
+            <expandoBridgeAttributes xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </expandoBridgeAttributes>
+            <failOnPortalException xsi:type="xsd:boolean">?</failOnPortalException>
+            <formDate xsi:type="xsd:dateTime">?</formDate>
+            <groupPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <guestOrUserId xsi:type="xsd:long">?</guestOrUserId>
+            <guestPermissions xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+            <headers xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               <!--Zero or more repetitions:-->
+               <item xsi:type="x-:mapItem">
+                  <key xsi:type="xsd:anyType">?</key>
+                  <value xsi:type="xsd:anyType">?</value>
+               </item>
+            </headers>
+            <indexingEnabled xsi:type="xsd:boolean">?</indexingEnabled>
+            <languageId xsi:type="soapenc:string">?</languageId>
+            <layoutFullURL xsi:type="soapenc:string">?</layoutFullURL>
+            <layoutURL xsi:type="soapenc:string">?</layoutURL>
+            <liferayPortletRequest xsi:type="xsd:anyType">?</liferayPortletRequest>
+            <liferayPortletResponse xsi:type="xsd:anyType">?</liferayPortletResponse>
+            <locale xsi:type="xsd:anyType">?</locale>
+            <modifiedDate xsi:type="xsd:dateTime">?</modifiedDate>
+            <pathFriendlyURLPrivateGroup xsi:type="soapenc:string">?</pathFriendlyURLPrivateGroup>
+            <pathFriendlyURLPrivateUser xsi:type="soapenc:string">?</pathFriendlyURLPrivateUser>
+            <pathFriendlyURLPublic xsi:type="soapenc:string">?</pathFriendlyURLPublic>
+            <pathMain xsi:type="soapenc:string">?</pathMain>
+            <plid xsi:type="xsd:long">?</plid>
+            <portalURL xsi:type="soapenc:string">?</portalURL>
+            <portletId xsi:type="soapenc:string">?</portletId>
+            <portletPreferencesIds xsi:type="mod:PortletPreferencesIds" xmlns:mod="http://model.portal.liferay.com">
+               <companyId xsi:type="xsd:long">?</companyId>
+               <ownerId xsi:type="xsd:long">?</ownerId>
+               <ownerType xsi:type="xsd:int">?</ownerType>
+               <plid xsi:type="xsd:long">?</plid>
+               <portletId xsi:type="soapenc:string">?</portletId>
+            </portletPreferencesIds>
+            <remoteAddr xsi:type="soapenc:string">?</remoteAddr>
+            <remoteHost xsi:type="soapenc:string">?</remoteHost>
+            <request xsi:type="xsd:anyType">?</request>
+            <response xsi:type="xsd:anyType">?</response>
+            <rootPortletId xsi:type="soapenc:string">?</rootPortletId>
+            <scopeGroup xsi:type="xsd:anyType">?</scopeGroup>
+            <scopeGroupId xsi:type="xsd:long">?</scopeGroupId>
+            <signedIn xsi:type="xsd:boolean">?</signedIn>
+            <themeDisplay xsi:type="them:ThemeDisplay" xmlns:them="http://theme.portal.liferay.com">
+               <CDNBaseURL xsi:type="soapenc:string">?</CDNBaseURL>
+               <CDNDynamicResourcesHost xsi:type="soapenc:string">?</CDNDynamicResourcesHost>
+               <CDNHost xsi:type="soapenc:string">?</CDNHost>
+               <MDRRuleGroupInstance xsi:type="xsd:anyType">?</MDRRuleGroupInstance>
+               <URLAddContent xsi:type="soapenc:string">?</URLAddContent>
+               <URLControlPanel xsi:type="soapenc:string">?</URLControlPanel>
+               <URLCurrent xsi:type="soapenc:string">?</URLCurrent>
+               <URLHome xsi:type="soapenc:string">?</URLHome>
+               <URLLayoutTemplates xsi:type="soapenc:string">?</URLLayoutTemplates>
+               <URLManageSiteMemberships xsi:type="xsd:anyType">?</URLManageSiteMemberships>
+               <URLMyAccount xsi:type="xsd:anyType">?</URLMyAccount>
+               <URLPageSettings xsi:type="xsd:anyType">?</URLPageSettings>
+               <URLPortal xsi:type="soapenc:string">?</URLPortal>
+               <URLPublishToLive xsi:type="xsd:anyType">?</URLPublishToLive>
+               <URLSignIn xsi:type="soapenc:string">?</URLSignIn>
+               <URLSignOut xsi:type="soapenc:string">?</URLSignOut>
+               <URLSiteAdministration xsi:type="soapenc:string">?</URLSiteAdministration>
+               <URLSiteContent xsi:type="soapenc:string">?</URLSiteContent>
+               <URLSiteMapSettings xsi:type="xsd:anyType">?</URLSiteMapSettings>
+               <URLSiteSettings xsi:type="xsd:anyType">?</URLSiteSettings>
+               <URLUpdateManager xsi:type="xsd:anyType">?</URLUpdateManager>
+               <account xsi:type="xsd:anyType">?</account>
+               <addSessionIdToURL xsi:type="xsd:boolean">?</addSessionIdToURL>
+               <ajax xsi:type="xsd:boolean">?</ajax>
+               <colorScheme xsi:type="xsd:anyType">?</colorScheme>
+               <colorSchemeId xsi:type="soapenc:string">?</colorSchemeId>
+               <company xsi:type="xsd:anyType">?</company>
+               <companyGroupId xsi:type="xsd:long">?</companyGroupId>
+               <companyId xsi:type="xsd:long">?</companyId>
+               <companyLogo xsi:type="soapenc:string">?</companyLogo>
+               <companyLogoHeight xsi:type="xsd:int">?</companyLogoHeight>
+               <companyLogoWidth xsi:type="xsd:int">?</companyLogoWidth>
+               <contact xsi:type="xsd:anyType">?</contact>
+               <controlPanelCategory xsi:type="soapenc:string">?</controlPanelCategory>
+               <defaultUser xsi:type="xsd:anyType">?</defaultUser>
+               <defaultUserId xsi:type="xsd:long">?</defaultUserId>
+               <device xsi:type="xsd:anyType">?</device>
+               <doAsGroupId xsi:type="xsd:long">?</doAsGroupId>
+               <doAsUserId xsi:type="soapenc:string">?</doAsUserId>
+               <doAsUserLanguageId xsi:type="soapenc:string">?</doAsUserLanguageId>
+               <facebook xsi:type="xsd:boolean">?</facebook>
+               <facebookCanvasPageURL xsi:type="soapenc:string">?</facebookCanvasPageURL>
+               <freeformLayout xsi:type="xsd:boolean">?</freeformLayout>
+               <i18n xsi:type="xsd:boolean">?</i18n>
+               <i18nLanguageId xsi:type="soapenc:string">?</i18nLanguageId>
+               <i18nPath xsi:type="soapenc:string">?</i18nPath>
+               <impersonated xsi:type="xsd:boolean">?</impersonated>
+               <includePortletCssJs xsi:type="xsd:boolean">?</includePortletCssJs>
+               <isolated xsi:type="xsd:boolean">?</isolated>
+               <languageId xsi:type="soapenc:string">?</languageId>
+               <layout xsi:type="xsd:anyType">?</layout>
+               <layoutSet xsi:type="xsd:anyType">?</layoutSet>
+               <layoutSetLogo xsi:type="soapenc:string">?</layoutSetLogo>
+               <layoutTypePortlet xsi:type="xsd:anyType">?</layoutTypePortlet>
+               <layouts xsi:type="urn:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]"/>
+               <lifecycle xsi:type="soapenc:string">?</lifecycle>
+               <lifecycleAction xsi:type="xsd:boolean">?</lifecycleAction>
+               <lifecycleEvent xsi:type="xsd:boolean">?</lifecycleEvent>
+               <lifecycleRender xsi:type="xsd:boolean">?</lifecycleRender>
+               <lifecycleResource xsi:type="xsd:boolean">?</lifecycleResource>
+               <locale xsi:type="xsd:anyType">?</locale>
+               <parentGroup xsi:type="xsd:anyType">?</parentGroup>
+               <parentGroupId xsi:type="xsd:long">?</parentGroupId>
+               <parentGroupName xsi:type="soapenc:string">?</parentGroupName>
+               <pathApplet xsi:type="soapenc:string">?</pathApplet>
+               <pathCms xsi:type="soapenc:string">?</pathCms>
+               <pathColorSchemeImages xsi:type="soapenc:string">?</pathColorSchemeImages>
+               <pathContext xsi:type="soapenc:string">?</pathContext>
+               <pathFlash xsi:type="soapenc:string">?</pathFlash>
+               <pathFriendlyURLPrivateGroup xsi:type="soapenc:string">?</pathFriendlyURLPrivateGroup>
+               <pathFriendlyURLPrivateUser xsi:type="soapenc:string">?</pathFriendlyURLPrivateUser>
+               <pathFriendlyURLPublic xsi:type="soapenc:string">?</pathFriendlyURLPublic>
+               <pathImage xsi:type="soapenc:string">?</pathImage>
+               <pathJavaScript xsi:type="soapenc:string">?</pathJavaScript>
+               <pathMain xsi:type="soapenc:string">?</pathMain>
+               <pathSound xsi:type="soapenc:string">?</pathSound>
+               <pathThemeCss xsi:type="soapenc:string">?</pathThemeCss>
+               <pathThemeImage xsi:type="soapenc:string">?</pathThemeImage>
+               <pathThemeImages xsi:type="soapenc:string">?</pathThemeImages>
+               <pathThemeJavaScript xsi:type="soapenc:string">?</pathThemeJavaScript>
+               <pathThemeRoot xsi:type="soapenc:string">?</pathThemeRoot>
+               <pathThemeTemplates xsi:type="soapenc:string">?</pathThemeTemplates>
+               <permissionChecker xsi:type="xsd:anyType">?</permissionChecker>
+               <plid xsi:type="xsd:long">?</plid>
+               <portalURL xsi:type="soapenc:string">?</portalURL>
+               <portletDisplay xsi:type="them:PortletDisplay">
+                  <URLBack xsi:type="soapenc:string">?</URLBack>
+                  <URLClose xsi:type="soapenc:string">?</URLClose>
+                  <URLConfiguration xsi:type="soapenc:string">?</URLConfiguration>
+                  <URLConfigurationJS xsi:type="soapenc:string">?</URLConfigurationJS>
+                  <URLEdit xsi:type="soapenc:string">?</URLEdit>
+                  <URLEditDefaults xsi:type="soapenc:string">?</URLEditDefaults>
+                  <URLEditGuest xsi:type="soapenc:string">?</URLEditGuest>
+                  <URLExportImport xsi:type="soapenc:string">?</URLExportImport>
+                  <URLHelp xsi:type="soapenc:string">?</URLHelp>
+                  <URLMax xsi:type="soapenc:string">?</URLMax>
+                  <URLMin xsi:type="soapenc:string">?</URLMin>
+                  <URLPortlet xsi:type="soapenc:string">?</URLPortlet>
+                  <URLPortletCss xsi:type="soapenc:string">?</URLPortletCss>
+                  <URLPrint xsi:type="soapenc:string">?</URLPrint>
+                  <URLRefresh xsi:type="soapenc:string">?</URLRefresh>
+                  <access xsi:type="xsd:boolean">?</access>
+                  <active xsi:type="xsd:boolean">?</active>
+                  <columnCount xsi:type="xsd:int">?</columnCount>
+                  <columnId xsi:type="soapenc:string">?</columnId>
+                  <columnPos xsi:type="xsd:int">?</columnPos>
+                  <content xsi:type="util:StringBundler" xmlns:util="http://util.kernel.portal.liferay.com">
+                     <index xsi:type="xsd:int">?</index>
+                  </content>
+                  <controlPanelCategory xsi:type="soapenc:string">?</controlPanelCategory>
+                  <customCSSClassName xsi:type="soapenc:string">?</customCSSClassName>
+                  <description xsi:type="soapenc:string">?</description>
+                  <focused xsi:type="xsd:boolean">?</focused>
+                  <id xsi:type="soapenc:string">?</id>
+                  <instanceId xsi:type="soapenc:string">?</instanceId>
+                  <modeAbout xsi:type="xsd:boolean">?</modeAbout>
+                  <modeConfig xsi:type="xsd:boolean">?</modeConfig>
+                  <modeEdit xsi:type="xsd:boolean">?</modeEdit>
+                  <modeEditDefaults xsi:type="xsd:boolean">?</modeEditDefaults>
+                  <modeEditGuest xsi:type="xsd:boolean">?</modeEditGuest>
+                  <modeHelp xsi:type="xsd:boolean">?</modeHelp>
+                  <modePreview xsi:type="xsd:boolean">?</modePreview>
+                  <modePrint xsi:type="xsd:boolean">?</modePrint>
+                  <modeView xsi:type="xsd:boolean">?</modeView>
+                  <namespace xsi:type="soapenc:string">?</namespace>
+                  <portletName xsi:type="soapenc:string">?</portletName>
+                  <portletSetup xsi:type="xsd:anyType">?</portletSetup>
+                  <resourcePK xsi:type="soapenc:string">?</resourcePK>
+                  <restoreCurrentView xsi:type="xsd:boolean">?</restoreCurrentView>
+                  <rootPortletId xsi:type="soapenc:string">?</rootPortletId>
+                  <showBackIcon xsi:type="xsd:boolean">?</showBackIcon>
+                  <showCloseIcon xsi:type="xsd:boolean">?</showCloseIcon>
+                  <showConfigurationIcon xsi:type="xsd:boolean">?</showConfigurationIcon>
+                  <showEditDefaultsIcon xsi:type="xsd:boolean">?</showEditDefaultsIcon>
+                  <showEditGuestIcon xsi:type="xsd:boolean">?</showEditGuestIcon>
+                  <showEditIcon xsi:type="xsd:boolean">?</showEditIcon>
+                  <showExportImportIcon xsi:type="xsd:boolean">?</showExportImportIcon>
+                  <showHelpIcon xsi:type="xsd:boolean">?</showHelpIcon>
+                  <showMaxIcon xsi:type="xsd:boolean">?</showMaxIcon>
+                  <showMinIcon xsi:type="xsd:boolean">?</showMinIcon>
+                  <showMoveIcon xsi:type="xsd:boolean">?</showMoveIcon>
+                  <showPortletCssIcon xsi:type="xsd:boolean">?</showPortletCssIcon>
+                  <showPortletIcon xsi:type="xsd:boolean">?</showPortletIcon>
+                  <showPrintIcon xsi:type="xsd:boolean">?</showPrintIcon>
+                  <showRefreshIcon xsi:type="xsd:boolean">?</showRefreshIcon>
+                  <stateExclusive xsi:type="xsd:boolean">?</stateExclusive>
+                  <stateMax xsi:type="xsd:boolean">?</stateMax>
+                  <stateMin xsi:type="xsd:boolean">?</stateMin>
+                  <stateNormal xsi:type="xsd:boolean">?</stateNormal>
+                  <statePopUp xsi:type="xsd:boolean">?</statePopUp>
+                  <themeDisplay/>
+                  <title xsi:type="soapenc:string">?</title>
+                  <webDAVEnabled xsi:type="xsd:boolean">?</webDAVEnabled>
+               </portletDisplay>
+               <portletGroupId xsi:type="xsd:long">?</portletGroupId>
+               <ppid xsi:type="soapenc:string">?</ppid>
+               <realCompanyLogo xsi:type="soapenc:string">?</realCompanyLogo>
+               <realCompanyLogoHeight xsi:type="xsd:int">?</realCompanyLogoHeight>
+               <realCompanyLogoWidth xsi:type="xsd:int">?</realCompanyLogoWidth>
+               <realUser xsi:type="xsd:anyType">?</realUser>
+               <realUserId xsi:type="xsd:long">?</realUserId>
+               <refererGroupId xsi:type="xsd:long">?</refererGroupId>
+               <refererPlid xsi:type="xsd:long">?</refererPlid>
+               <request xsi:type="xsd:anyType">?</request>
+               <scopeGroup xsi:type="xsd:anyType">?</scopeGroup>
+               <scopeGroupId xsi:type="xsd:long">?</scopeGroupId>
+               <scopeGroupIdOrLiveGroupId xsi:type="xsd:long">?</scopeGroupIdOrLiveGroupId>
+               <scopeGroupName xsi:type="soapenc:string">?</scopeGroupName>
+               <scopeLayout xsi:type="xsd:anyType">?</scopeLayout>
+               <secure xsi:type="xsd:boolean">?</secure>
+               <serverName xsi:type="soapenc:string">?</serverName>
+               <serverPort xsi:type="xsd:int">?</serverPort>
+               <sessionId xsi:type="soapenc:string">?</sessionId>
+               <showAddContentIcon xsi:type="xsd:boolean">?</showAddContentIcon>
+               <showAddContentIconPermission xsi:type="xsd:boolean">?</showAddContentIconPermission>
+               <showControlPanelIcon xsi:type="xsd:boolean">?</showControlPanelIcon>
+               <showHomeIcon xsi:type="xsd:boolean">?</showHomeIcon>
+               <showLayoutTemplatesIcon xsi:type="xsd:boolean">?</showLayoutTemplatesIcon>
+               <showManageSiteMembershipsIcon xsi:type="xsd:boolean">?</showManageSiteMembershipsIcon>
+               <showMyAccountIcon xsi:type="xsd:boolean">?</showMyAccountIcon>
+               <showPageCustomizationIcon xsi:type="xsd:boolean">?</showPageCustomizationIcon>
+               <showPageSettingsIcon xsi:type="xsd:boolean">?</showPageSettingsIcon>
+               <showPortalIcon xsi:type="xsd:boolean">?</showPortalIcon>
+               <showSignInIcon xsi:type="xsd:boolean">?</showSignInIcon>
+               <showSignOutIcon xsi:type="xsd:boolean">?</showSignOutIcon>
+               <showSiteAdministrationIcon xsi:type="xsd:boolean">?</showSiteAdministrationIcon>
+               <showSiteContentIcon xsi:type="xsd:boolean">?</showSiteContentIcon>
+               <showSiteMapSettingsIcon xsi:type="xsd:boolean">?</showSiteMapSettingsIcon>
+               <showSiteSettingsIcon xsi:type="xsd:boolean">?</showSiteSettingsIcon>
+               <showStagingIcon xsi:type="xsd:boolean">?</showStagingIcon>
+               <signedIn xsi:type="xsd:boolean">?</signedIn>
+               <siteDefaultLocale xsi:type="xsd:anyType">?</siteDefaultLocale>
+               <siteGroup xsi:type="xsd:anyType">?</siteGroup>
+               <siteGroupId xsi:type="xsd:long">?</siteGroupId>
+               <siteGroupIdOrLiveGroupId xsi:type="xsd:long">?</siteGroupIdOrLiveGroupId>
+               <siteGroupName xsi:type="soapenc:string">?</siteGroupName>
+               <stateExclusive xsi:type="xsd:boolean">?</stateExclusive>
+               <stateMaximized xsi:type="xsd:boolean">?</stateMaximized>
+               <statePopUp xsi:type="xsd:boolean">?</statePopUp>
+               <theme xsi:type="xsd:anyType">?</theme>
+               <themeCssFastLoad xsi:type="xsd:boolean">?</themeCssFastLoad>
+               <themeId xsi:type="soapenc:string">?</themeId>
+               <themeImagesFastLoad xsi:type="xsd:boolean">?</themeImagesFastLoad>
+               <themeJsBarebone xsi:type="xsd:boolean">?</themeJsBarebone>
+               <themeJsFastLoad xsi:type="xsd:boolean">?</themeJsFastLoad>
+               <themeSettings xsi:type="xsd:anyType">?</themeSettings>
+               <tilesContent xsi:type="soapenc:string">?</tilesContent>
+               <tilesSelectable xsi:type="xsd:boolean">?</tilesSelectable>
+               <tilesTitle xsi:type="soapenc:string">?</tilesTitle>
+               <timeZone xsi:type="xsd:anyType">?</timeZone>
+               <unfilteredLayouts xsi:type="urn:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]"/>
+               <user xsi:type="xsd:anyType">?</user>
+               <userId xsi:type="xsd:long">?</userId>
+               <wapTheme xsi:type="xsd:boolean">?</wapTheme>
+               <widget xsi:type="xsd:boolean">?</widget>
+            </themeDisplay>
+            <timeZone xsi:type="xsd:anyType">?</timeZone>
+            <userAgent xsi:type="soapenc:string">?</userAgent>
+            <userDisplayURL xsi:type="soapenc:string">?</userDisplayURL>
+            <userId xsi:type="xsd:long">?</userId>
+            <uuid xsi:type="soapenc:string">?</uuid>
+            <workflowAction xsi:type="xsd:int">?</workflowAction>
+         </serviceContext>
+      </urn:updatePublication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/updatePublicationRequest"/></con:call></con:operation></con:interface><con:mockService port="8088" path="/publications" host="Romain-PC" name="publicationsTest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="addPublication" interface="Plugin_publication_PublicationServiceSoapBinding" operation="addPublication"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addPublicationResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <addPublicationReturn xsi:type="mod:PublicationSoap" xmlns:mod="http://model.publication.com">
+            <authorId xsi:type="xsd:long">?</authorId>
+            <authorname xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorname>
+            <authorphoto xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorphoto>
+            <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+            <comment xsi:type="xsd:boolean">?</comment>
+            <content xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</content>
+            <date xsi:type="xsd:dateTime">?</date>
+            <domain xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</domain>
+            <parentId xsi:type="xsd:long">?</parentId>
+            <primaryKey xsi:type="xsd:long">?</primaryKey>
+            <publicationId xsi:type="xsd:long">?</publicationId>
+            <statut xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</statut>
+         </addPublicationReturn>
+      </urn:addPublicationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/addPublicationResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="deletePublication" interface="Plugin_publication_PublicationServiceSoapBinding" operation="deletePublication"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deletePublicationResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <deletePublicationReturn xsi:type="mod:PublicationSoap" xmlns:mod="http://model.publication.com">
+            <authorId xsi:type="xsd:long">?</authorId>
+            <authorname xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorname>
+            <authorphoto xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorphoto>
+            <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+            <comment xsi:type="xsd:boolean">?</comment>
+            <content xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</content>
+            <date xsi:type="xsd:dateTime">?</date>
+            <domain xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</domain>
+            <parentId xsi:type="xsd:long">?</parentId>
+            <primaryKey xsi:type="xsd:long">?</primaryKey>
+            <publicationId xsi:type="xsd:long">?</publicationId>
+            <statut xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</statut>
+         </deletePublicationReturn>
+      </urn:deletePublicationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/deletePublicationResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getPublication" interface="Plugin_publication_PublicationServiceSoapBinding" operation="getPublication"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublicationResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <getPublicationReturn xsi:type="mod:PublicationSoap" xmlns:mod="http://model.publication.com">
+            <authorId xsi:type="xsd:long">?</authorId>
+            <authorname xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorname>
+            <authorphoto xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorphoto>
+            <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+            <comment xsi:type="xsd:boolean">?</comment>
+            <content xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</content>
+            <date xsi:type="xsd:dateTime">?</date>
+            <domain xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</domain>
+            <parentId xsi:type="xsd:long">?</parentId>
+            <primaryKey xsi:type="xsd:long">?</primaryKey>
+            <publicationId xsi:type="xsd:long">?</publicationId>
+            <statut xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</statut>
+         </getPublicationReturn>
+      </urn:getPublicationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getPublicationsByBeneficiaire" interface="Plugin_publication_PublicationServiceSoapBinding" operation="getPublicationsByBeneficiaire"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublicationsByBeneficiaireResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <getPublicationsByBeneficiaireReturn xsi:type="urn:ArrayOf_tns2_PublicationSoap" soapenc:arrayType="mod:PublicationSoap[]" xmlns:mod="http://model.publication.com"/>
+      </urn:getPublicationsByBeneficiaireResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationsByBeneficiaireResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getPublicationsByDomain" interface="Plugin_publication_PublicationServiceSoapBinding" operation="getPublicationsByDomain"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getPublicationsByDomainResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <getPublicationsByDomainReturn xsi:type="urn:ArrayOf_tns2_PublicationSoap" soapenc:arrayType="mod:PublicationSoap[]" xmlns:mod="http://model.publication.com"/>
+      </urn:getPublicationsByDomainResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/getPublicationsByDomainResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="updatePublication" interface="Plugin_publication_PublicationServiceSoapBinding" operation="updatePublication"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.publication.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updatePublicationResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <updatePublicationReturn xsi:type="mod:PublicationSoap" xmlns:mod="http://model.publication.com">
+            <authorId xsi:type="xsd:long">?</authorId>
+            <authorname xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorname>
+            <authorphoto xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</authorphoto>
+            <beneficiaireId xsi:type="xsd:long">?</beneficiaireId>
+            <comment xsi:type="xsd:boolean">?</comment>
+            <content xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</content>
+            <date xsi:type="xsd:dateTime">?</date>
+            <domain xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</domain>
+            <parentId xsi:type="xsd:long">?</parentId>
+            <primaryKey xsi:type="xsd:long">?</primaryKey>
+            <publicationId xsi:type="xsd:long">?</publicationId>
+            <statut xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</statut>
+         </updatePublicationReturn>
+      </urn:updatePublicationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:http.service.publication.com/PublicationServiceSoap/updatePublicationResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
